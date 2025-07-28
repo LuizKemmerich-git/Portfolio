@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portofólio - Luiz Bueno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="particulas"> </div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#projetos" class="menu-link">Estudos</a></li>
+            <li><a href="#contatos" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/foto.jpg" alt="Foto de Luiz Bernardo K.Bueno" class="foto-perfil">
+        <h1>Luiz Bernardo Kemmerich Bueno</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor - FRONT END</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Olá! Me chamo Luiz Bueno, tenho 17 anos e atualmente trabalho com suporte técnico e implantação de sistemas. Sou apaixonado por tecnologia e estou dando meus primeiros passos no mundo da programação.
+
+            Atualmente estudo HTML, CSS e JavaScript, e compartilho minha jornada de aprendizado para me tornar um desenvolvedor completo. Gosto de organizar meu tempo entre estudo, trabalho e projetos pessoais, sempre buscando aprender algo novo todos os dias.
+
+            Criei este portfólio para mostrar um pouco do que venho aprendendo e também como forma de acompanhar minha evolução. Meu objetivo é trabalhar com desenvolvimento de sistemas e, no futuro, atuar em projetos que impactem a vida das pessoas por meio da tecnologia.
+
+            Se quiser acompanhar minha trajetória ou trocar ideias, estou sempre disponível!</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">O que eu estou estudando:</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <div class="caixa-textos-projeto"> 
+                <img src="./img/front.png" alt="Estudos" class="projetos-imagem">
+                <h3 class="info-projetos">Estudos FRONT END</h3>
+                <p class="paragrafo-projetos">Atualmente estou focado em aprender HTML, CSS e JavaScript, que são as bases da construção visual dos sites. Com isso, estou entendendo como criar páginas responsivas, interativas e bem estruturadas para o usuário final.                   
+</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <div class="caixa-textos-projeto">
+                <img src="./img/back.png" alt="Estudos" class="projetos-imagem">
+                <h3 class="info-projetos">Estudos BACK END</h3>
+                <p class="paragrafo-projetos">Ainda irei começar meus estudos em back-end, mas pretendo aprender tecnologias como Node.js, MySQL e conceitos de APIs, autenticação, banco de dados e segurança. O objetivo é entender como funcionam os bastidores das aplicações e como os dados são processados.</p>
+                </div>
+            </div>
+            
+            <div class="projetos-card">
+                <div class="caixa-textos-projeto">
+                <img src="./img/full.png" alt="Estudos" class="projetos-imagem">
+                <h3 class="info-projetos">Estudos FULL STRACK</h3>
+                <p class="paragrafo-projetos">O FullStack une o conhecimento de front-end e back-end. Meu foco como fullstack será dominar tanto a parte visual quanto a lógica por trás dos sistemas, conectando tudo para criar aplicações completas. Com o tempo, quero trabalhar com integrações entre front e back, usando ferramentas como Express.js, MongoDB, Git e frameworks modernos.
+</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarwhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="Nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem " rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar mensagem</button>
+
+        </form>
+    </section>
+    
+ <script>
+function enviarwhats(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('Nome').value;
+    const mensagem = document.getElementById('mensagem').value;
+    const telefone = '5554992646911';
+
+    const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+    const msgformatada = encodeURIComponent(texto);
+
+    const url = `https://wa.me/${telefone}?text=${msgformatada}`;
+
+    console.log(url);
+
+    window.open(url, '_blank');
+}
+</script>
+
+
+</body>
+</html>
