@@ -257,6 +257,7 @@ padding: 6rem 2rem;
     
 }
     
+
 .icones-contato {
     display: flex;
     justify-content: center;
@@ -284,4 +285,3 @@ padding: 6rem 2rem;
 .icones-contato a {
     text-decoration: none;
 }
-

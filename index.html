@@ -40,6 +40,7 @@
     <section id="projetos" class="projetos">
         <h2 class="projetos-titulo">O que eu estou estudando:</h2>
         <div class="projetos-caixa">
+
             <div class="projetos-card">
                 <div class="caixa-textos-projeto">
                     <img src="img/frontend.jpg" alt="Estudos Front End" class="projetos-imagem" />
@@ -69,22 +70,59 @@
                     </p>
                 </div>
             </div>
+
         </div>
     </section>
 
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Entre em Contato</h2>
+
+        <!-- Ícones GitHub e Email -->
         <div class="icones-contato">
-        <a href="https://github.com/LuizKemmerich-git" target="_blank">
-        <img src="img/github.png" alt="GitHub" class="icone-social" />
-        </a>
+            <a href="https://github.com/LuizKemmerich-git" target="_blank" rel="noopener noreferrer">
+                <img src="img/github.png" alt="GitHub" class="icone-social" />
+            </a>
 
-       <a href="mailto:luizbernardo.kemmerich@email.com?subject=Contato%20via%20portfólio&body=Olá%20Luiz,%20gostaria%20de%20falar%20com%20você!">
-       <img src="img/email.jpg" alt="E-mail" class="icone-social" />
-       </a>
-       </div>
+            <a href="mailto:luizbernardo.kemmerich@email.com?subject=Contato%20via%20portfólio&body=Olá%20Luiz,%20gostaria%20de%20falar%20com%20você!">
+                <img src="img/email.jpg" alt="E-mail" class="icone-social" />
+            </a>
+        </div>
 
+        <!-- Formulário para enviar mensagem no WhatsApp -->
+        <form class="formulario-contato" id="formulario" onsubmit="enviarwhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="Nome" required />
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem" required></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar mensagem</button>
+        </form>
     </section>
+
+<script>
+function enviarwhats(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('Nome').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+    const telefone = '5554992646911'; // Seu número com código do país + DDD
+
+    if (!nome || !mensagem) {
+        alert('Por favor, preencha nome e mensagem.');
+        return;
+    }
+
+    const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+    const msgformatada = encodeURIComponent(texto);
+
+    const url = `https://wa.me/${telefone}?text=${msgformatada}`;
+
+    window.open(url, '_blank');
+}
+</script>
 
 </body>
 </html>
