@@ -1,3 +1,4 @@
+/* ================== SEU CSS EXISTENTE ================== */
 * {
     margin: 0;
     padding: 0;
@@ -109,7 +110,6 @@ h1 {
    border: 1px solid var(--vidro);
    backdrop-filter: blur(10px);
    background-color: var(--maisEscuro);
-
 }
 
 .sobre-paragrafo {
@@ -158,8 +158,8 @@ h1 {
     width: 100%;
     object-fit: cover;
     overflow: hidden;
-    
 }
+
 .caixa-textos-projeto {
   padding: 1.5rem;
 }
@@ -174,14 +174,13 @@ h1 {
 }
 
 .contatos {
-padding: 6rem 2rem;
+    padding: 6rem 2rem;
 }
 
 .contatos-titulo {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-
 }
 
 .formulario-contato {
@@ -225,10 +224,8 @@ padding: 6rem 2rem;
     transition: all 0.5s ease;
 }
 
-
 .botao-form:hover {
     transform: translateY(-4px);
-  
 }
 
 .particulas {
@@ -249,20 +246,18 @@ padding: 6rem 2rem;
 @keyframes flutuar {
     0%, 100% {
         transform: translateY(0);
-        }
+    }
 
     50% {
-            transform: translatey(-20px);
-        }
-    
+        transform: translatey(-20px);
+    }
 }
-    
 
 .icones-contato {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem; /* aumenta o espaço entre os ícones */
+    gap: 3rem;
     margin-top: 2rem;
     flex-wrap: wrap;
 }
@@ -271,17 +266,36 @@ padding: 6rem 2rem;
     width: 60px;
     height: 60px;
     padding: 10px;
-    background-color: #ffffff11; /* leve fundo branco transparente */
-    border-radius: 50%; /* deixa os ícones arredondados */
+    background-color: #ffffff11;
+    border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 8px #00000022;
 }
 
 .icone-social:hover {
     transform: scale(1.15);
-    box-shadow: 0 0 12px #ff7b00aa; /* brilho ao passar o mouse */
+    box-shadow: 0 0 12px #ff7b00aa;
 }
 
 .icones-contato a {
     text-decoration: none;
+}
+
+/* ================== NOVO BOTÃO “VEJA MAIS” ================== */
+.botao-projeto {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    color: var(--claro);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.botao-projeto:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(79, 70, 229, 0.5);
 }
